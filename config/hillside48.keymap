@@ -110,8 +110,8 @@
                         bindings = <
 &kp  F11      &kp  N1       &kp  N2       &kp  N3       &kp  N4       &kp  N5                                                                        &kp   N6      &kp   N7      &kp   N8      &kp   N9      &kp  N0       &trans
 &kp  F12      &kp  F1       &kp  F2       &kp  F3       &kp  F4       &kp  F5                                                                        &kp  C_VOL_UP &kp   LEFT    &kp   UP      &kp   DOWN    &kp  RIGHT    &trans
-&trans        &kp  F6       &kp  F7       &kp  F8       &kp  F9       &kp  F10      &mo ADJ_L                                          &kp  C_MUTE   &kp  C_VOL_DN &kp   RSHFT   &kp   RCTRL   &kp   LALT    &kp  RGUI     &kp DEL
-                            &trans                      &trans        &trans        &trans        &kp INS                &trans        &trans        &trans        &trans                      &kp  RCTRL   
+&trans        &kp  F6       &kp  F7       &kp  F8       &kp  F9       &kp  F10      &mo ADJ_L                                          &trans        &kp  C_VOL_DN &kp   RSHFT   &kp   RCTRL   &kp   LALT    &kp  RGUI     &kp DEL
+                            &trans                      &trans        &trans        &trans        &kp INS                &kp  C_MUTE   &trans        &trans        &trans        &trans                      &kp  RCTRL   
                         >;
 			
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
