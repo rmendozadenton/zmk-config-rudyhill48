@@ -103,13 +103,13 @@
 /* NUM   
  * -------------------------------------------------------------------------------------------------------------------------------------
  * | F11   |   1   |   2   |   3   |   4   |   5   |----------------------------------|   6   |   7   |   8   |   9   |       | BSPC  |
- * | F12   |  F1   |  F2   |  F3   |  F4   |  F5   |----------------------------------|VOL UP | Left  |  Up   | Down  | Right | ENTER |
+ * | F12   |  F1   |  F2   |  F3   |  F4   |  F5   |----------------------------------|VOL UP | Left  |  Down | Up    | Right | ENTER |
  * | Shift |  F6   |  F7   |  F8   |  F9   |  F10  |  ADJ_L |-----------------| MUTE  |VOL DN | Shift | Ctrl  | Alt   | Gui   |DELETE|
  * ----------------|       |-------|       |       |       | INS |----|       |       |       |       |-------| CTRL  |----------------
  */
                         bindings = <
 &kp  F11      &kp  N1       &kp  N2       &kp  N3       &kp  N4       &kp  N5                                                                        &kp   N6      &kp   N7      &kp   N8      &kp   N9      &kp  N0       &trans
-&kp  F12      &kp  F1       &kp  F2       &kp  F3       &kp  F4       &kp  F5                                                                        &kp  C_VOL_UP &kp   LEFT    &kp   UP      &kp   DOWN    &kp  RIGHT    &trans
+&kp  F12      &kp  F1       &kp  F2       &kp  F3       &kp  F4       &kp  F5                                                                        &kp  C_VOL_UP &kp   LEFT    &kp   DOWN    &kp   UP    &kp  RIGHT    &trans
 &trans        &kp  F6       &kp  F7       &kp  F8       &kp  F9       &kp  F10      &mo ADJ_L                                          &trans        &kp  C_VOL_DN &kp   RSHFT   &kp   RCTRL   &kp   LALT    &kp  RGUI     &kp DEL
                             &trans                      &trans        &trans        &trans        &kp INS                &kp  C_MUTE   &trans        &trans        &trans        &trans                      &kp  RCTRL   
                         >;
