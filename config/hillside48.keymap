@@ -23,6 +23,17 @@
 #define Copy   LC(C)
 #define Paste  LC(V)
 
+&lt {
+    flavor = "tap-preferred";
+    tapping_term_ms = <1500>;
+};
+
+
+&mt {
+    flavor = "tap-preferred";
+    tapping_term_ms = <200>;
+};
+
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -32,13 +43,13 @@
  * -------------------------------------------------------------------------------------------------------------------------------------
  * | `     |       |   W   |   E   |   R   |   T   |-----------------------------------|   Y   |   U   |   I   |   O   |       | ESC   |
  * | TAB   |   A   |   S   |   D   | SYM F |   G   |-----------------------------------|   H   | SYM J |   K   |   L   |   ;   | ENTER |
- * | Q     |   Z   |   X   |   C   |   V   |   B   | Num   |-------------------|  Sym  |   N   |   M   |   ,   |   .   |   /   | P     |
+ * | Q     |   Z   |   X   |   C   | GUI V |   B   | Num   |-------------------|  Sym  |   N   | GUI M |   ,   |   .   |   /   | P     |
  * ----------------| CTRL  |-------|  GUI  |  ALT  | ENTER |  SPACE  |---| SHIFT| BSPC |  ALT  |  GUI  |-------|   '   |----------------
  */
                         bindings = <
 &kp  GRAVE    &none         &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp U        &kp  I        &kp  O        &none         &kp  ESC
 &kp  TAB      &kp  A        &kp  S        &kp  D        &lt SYM F     &kp  G                                                                         &kp  H        &lt SYM J    &kp  K        &kp  L        &kp  SEMI     &kp  ENTER  
-&kp  Q        &kp  Z        &kp  X        &kp  C        &kp  V        &kp  B        &mo  NUM_L                                         &mo  SYM_L    &kp  N        &kp M        &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  P
+&kp  Q        &kp  Z        &kp  X        &kp  C        &mt LGUI  V   &kp  B        &mo  NUM_L                                         &mo  SYM_L    &kp  N        &mt RGUI M   &kp  COMMA    &kp  DOT      &kp  SLASH    &kp  P
                             &kp  LCTRL                  &kp  LGUI     &kp  LALT     &kp  ENTER    &kp  SPACE             &kp  RSHFT    &kp  BSPC     &kp  LALT     &kp RGUI                   &kp  SQT   
                         >;
 			
