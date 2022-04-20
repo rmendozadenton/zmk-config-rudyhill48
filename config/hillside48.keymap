@@ -35,11 +35,11 @@
 
                 default_layer {
 /* QWERTY
- * -------------------------------------------------------------------------------------------------------------------------------------
- * | `     |       |   W    |   E     |   R   |   T   |-----------------------------------|   Y   |   U   |   I   |   O   |       | ESC   |
- * | TAB   |   A   |   S    |   D     | SYM F |   G   |-----------------------------------|   H   | SYM J |   K   |   L   |   ;   | ENTER |
- * | Q     |   Z   | LALT X | LCTRL C | GUI V |   B   | Num   |-------------------|  Sym  |   N   | GUI M |   ,   |   .   |   /   | P     |
- * ----------------| CTRL  |----------|  SYM  |  ALT  | ENTER |  SPACE  |---| SHIFT| BSPC |  ALT  |  NUM  |-------|   '   |----------------
+ * ------------------------------------------------------------------------------------------------------------------------------------------
+ * | `     |       |   W    |   E     |   R   |   T   |-----------------------------------|   Y   |   U   |   I     |   O   |       | ESC   |
+ * | TAB   |   A   |   S    |   D     | SYM F |   G   |-----------------------------------|   H   | SYM J |   K     |   L   |   ;   | ENTER |
+ * | Q     |   Z   | LALT X | LCTRL C | GUI V |   B   | Num   |-------------------|  Sym  |   N   | GUI M | RCTRL , |LALT . |   /   | P     |
+ * ----------------| CTRL  |----------|  SYM  |  ALT  | ENTER |  SPACE  |---| SHIFT| BSPC |  ALT  |  NUM  |---------|   '   |----------------
  */
                         bindings = <
 &kp  GRAVE    &none         &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp U        &kp  I            &kp  O         &none         &kp  ESC
@@ -108,15 +108,15 @@
                 num_layer {
 /* NUM   
  * -------------------------------------------------------------------------------------------------------------------------------------
- * | F11   |   1   |   2   |   3   |   4   |   5   |----------------------------------|   6   |   7   |   8   |   9   |       | BSPC  |
- * | F12   |  F1   |  F2   |  F3   |  F4   |  F5   |----------------------------------|VOL UP | Left  |  Down | Up    | Right | ENTER |
- * | Shift |  F6   |  F7   |  F8   |  F9   |  F10  |  ADJ_L |-----------------| MUTE  |VOL DN | Shift | Ctrl  | Alt   | Gui   |DELETE|
+ * | F11   |   1   |   2   |   3   |   4   |   5   |----------------------------------|   6   |   7   |   8   |   9   |  0    |   |    |
+ * | F12   |  F1   |  F2   |  F3   |  F4   |  F5   |----------------------------------| Left  |  Down | Up    | Right | ENTER | VOL_UP |
+ * | Shift |  F6   |  F7   |  F8   |  F9   |  F10  |  ADJ_L |-----------------| MUTE  | Shift | Ctrl  | Alt   | Gui   |DELETE | VOL_DN |
  * ----------------|       |-------|       |       |       | INS |----|       |       |       |       |-------| CTRL  |----------------
  */
                         bindings = <
-&kp  F11      &kp  N1       &kp  N2       &kp  N3       &kp  N4       &kp  N5                                                                        &kp   N6      &kp   N7      &kp   N8      &kp   N9      &kp  N0       &trans
-&kp  F12      &kp  F1       &kp  F2       &kp  F3       &kp  F4       &kp  F5                                                                        &kp  C_VOL_UP &kp   LEFT    &kp   DOWN    &kp   UP    &kp  RIGHT    &trans
-&trans        &kp  F6       &kp  F7       &kp  F8       &kp  F9       &kp  F10      &mo ADJ_L                                          &trans        &kp  C_VOL_DN &kp   RSHFT   &kp   RCTRL   &kp   LALT    &kp  RGUI     &kp DEL
+&kp  F11      &kp  N1       &kp  N2       &kp  N3       &kp  N4       &kp  N5                                                                        &kp   N6      &kp   N7      &kp   N8      &kp   N9      &kp  N0       &KP  PIPE
+&kp  F12      &kp  F1       &kp  F2       &kp  F3       &kp  F4       &kp  F5                                                                        &kp   LEFT    &kp   DOWN    &kp   UP      &kp  RIGHT    &trans        &kp  C_VOL_UP 
+&trans        &kp  F6       &kp  F7       &kp  F8       &kp  F9       &kp  F10      &mo ADJ_L                                          &trans        &kp   RSHFT   &kp   RCTRL   &kp   LALT    &kp  RGUI     &kp DEL       &kp  C_VOL_DN 
                             &trans                      &trans        &trans        &trans        &kp INS                &kp  C_MUTE   &trans        &trans        &trans        &trans                      &kp  RCTRL   
                         >;
 			
@@ -129,7 +129,7 @@
  * | RGB_TOG | QWERTY| DVORAK| COLEMK|       |       |-----------------------------------|       |Prt Scr|       | EP_OFF| EP_ON |       |
  * |         | BT 0  | BT 1  | BT 2  | BT 3  | BT 4  |-----------------------------------|       |       |       |       |       |       |
  * | BOOTL   | RESET |       |OUT_USB|OUT_BLE|       |BT CLR |-------------------|       |       |       |       |       |       | SHIFT |
- * ----------------|       |-------|       |       |       |       |---|       |       |       |       |-------| CTRL  |----------------
+ * ------------------|       |-------|       |       |       |       |---|       |       |       |       |-------| CTRL  |----------------
  */
                 bindings = <
 &rgb_ug RGB_TOG &to  QWERTY_L &to  DVORAK_L &to  COLEMK_L &none         &none                                                                             &none             &kp PRINTSCREEN    &none         &ext_power EP_OFF  &ext_power EP_ON &none
