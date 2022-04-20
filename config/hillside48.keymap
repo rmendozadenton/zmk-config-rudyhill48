@@ -114,7 +114,7 @@
  * ----------------|       |-------|       |       |       | INS |----|       |       |       |       |-------| CTRL  |----------------
  */
                         bindings = <
-&kp  F11      &kp  N1       &kp  N2       &kp  N3       &kp  N4       &kp  N5                                                                        &kp   N6      &kp   N7      &kp   N8      &kp   N9      &kp  N0       &KP  PIPE
+&kp  F11      &kp  N1       &kp  N2       &kp  N3       &kp  N4       &kp  N5                                                                        &kp   N6      &kp   N7      &kp   N8      &kp   N9      &kp  N0       &kp  PIPE
 &kp  F12      &kp  F1       &kp  F2       &kp  F3       &kp  F4       &kp  F5                                                                        &kp   LEFT    &kp   DOWN    &kp   UP      &kp  RIGHT    &trans        &kp  C_VOL_UP 
 &trans        &kp  F6       &kp  F7       &kp  F8       &kp  F9       &kp  F10      &mo ADJ_L                                          &trans        &kp   RSHFT   &kp   RCTRL   &kp   LALT    &kp  RGUI     &kp DEL       &kp  C_VOL_DN 
                             &trans                      &trans        &trans        &trans        &kp INS                &kp  C_MUTE   &trans        &trans        &trans        &trans                      &kp  RCTRL   
