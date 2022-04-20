@@ -36,14 +36,14 @@
                 default_layer {
 /* QWERTY
  * ------------------------------------------------------------------------------------------------------------------------------------------
- * | `     |       |   W    |   E     |   R   |   T   |-----------------------------------|   Y   |   U   |   I     |   O   |       | ESC   |
- * | TAB   |   A   |   S    |   D     | SYM F |   G   |-----------------------------------|   H   | SYM J |   K     |   L   |   ;   | ENTER |
+ * | `     |       |   W    |   E     |   R   |   T   |-----------------------------------|   Y   |   U   |   I     |   O   | ESC   | ESC   |
+ * | TAB   |   A   |   S    |   D     | SYM F | ESC G |-----------------------------------|   H   | SYM J |   K     |   L   |   ;   | ENTER |
  * | Q     |   Z   | LALT X | LCTRL C | GUI V |   B   | Num   |-------------------|  Sym  |   N   | GUI M | RCTRL , |LALT . |   /   | P     |
  * ----------------| CTRL  |----------|  SYM  |  ALT  | ENTER |  SPACE  |---| SHIFT| BSPC |  ALT  |  NUM  |---------|   '   |----------------
  */
                         bindings = <
-&kp  GRAVE    &none         &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp U        &kp  I            &kp  O         &none         &kp  ESC
-&kp  TAB      &kp  A        &kp  S        &kp  D        &lt SYM_L F   &kp  G                                                                         &kp  H        &lt SYM_L J  &kp  K            &kp  L         &kp  SEMI     &kp  ENTER  
+&kp  GRAVE    &none         &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp U        &kp  I            &kp  O         &kp  ESC      &kp  ESC
+&kp  TAB      &kp  A        &kp  S        &kp  D        &lt SYM_L F   &lt ESC  G                                                                     &kp  H        &lt SYM_L J  &kp  K            &kp  L         &kp  SEMI     &kp  ENTER  
 &kp  Q        &kp  Z        &mt LALT  X   &mt  LCTRL C  &mt LGUI  V   &kp  B        &mo  NUM_L                                         &mo  SYM_L    &kp  N        &mt RGUI M   &mt RCTRL  COMMA  &mt  RALT DOT  &kp  SLASH    &kp  P
                             &kp  LCTRL                  &mo SYM_L     &kp  LALT     &kp  ENTER    &kp  SPACE             &kp  RSHFT    &kp  BSPC     &kp  LALT     &mo NUM_L                      &kp  SQT   
                         >;
