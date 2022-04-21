@@ -45,18 +45,13 @@
             bindings = <&kp TAB>;
         };
 
-        combo_tab {
+        combo_lt {
             timeout-ms = <100>;
             key-positions = <40 41>;
             bindings = <&kp LT>;
         };
 
-        combo_tab {
-            timeout-ms = <100>;
-            key-positions = <35 11>;
-            bindings = <&kp ESC>;
-        };
-        combo_tab {
+        combo_gt {
             timeout-ms = <100>;
             key-positions = <39 40>;
             bindings = <&kp GT>;
