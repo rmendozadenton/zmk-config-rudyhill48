@@ -53,7 +53,7 @@
 
         combo_tab {
             timeout-ms = <100>;
-            key-positions = <32 11>;
+            key-positions = <35 11>;
             bindings = <&kp ESC>;
         };
         combo_tab {
