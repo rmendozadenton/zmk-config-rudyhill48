@@ -45,6 +45,22 @@
             bindings = <&kp TAB>;
         };
 
+        combo_tab {
+            timeout-ms = <100>;
+            key-positions = <40 41>;
+            bindings = <&kp LT>;
+        };
+
+        combo_tab {
+            timeout-ms = <100>;
+            key-positions = <32 11>;
+            bindings = <&kp ESC>;
+        };
+        combo_tab {
+            timeout-ms = <100>;
+            key-positions = <39 40>;
+            bindings = <&kp GT>;
+        };
     };
     
     keymap {
@@ -55,8 +71,8 @@
  * ------------------------------------------------------------------------------------------------------------------------------------------
  * | `     |       |   W    |   E     |   R   |   T   |-----------------------------------|   Y   |   U   |   I     |   O   | ESC   | ESC   |
  * | TAB   |   A   |   S    |   D     | SYM F | ESC G |-----------------------------------|   H   | SYM J |   K     |   L   |   ;   | ENTER |
- * | Q     | SHIFT  Z   | LALT X | LCTRL C | GUI V |   B   | Num   |-------------------|  Sym  |   N   | GUI M | LCTRL , |LALT . |   /   | P     |
- * ----------------| CTRL  |----------|  SYM  |  ALT  | ESC ENTER | SYM SPACE  |---| SHIFT| BSPC |  ALT  |  NUM  |---------|   '   |----------------
+ * | Q     | SHIFT  Z   | LALT X | LCTRL C | GUI V |   B   | Num   |---------------  Sym  |   N   | GUI M | LCTRL , | LALT .|   /   | P     |
+ * ----------------| CTRL  |----------|  SYM  |  ALT  | ESC ENTER | SYM SPACE  |---| SHIFT| BSPC |  ALT  |  NUM  |---|   '   |---------------
  */
                         bindings = <
 &kp  GRAVE    &none         &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp U        &kp  I            &kp  O         &kp  ESC      &kp  ESC
