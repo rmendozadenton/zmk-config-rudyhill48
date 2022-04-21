@@ -22,7 +22,7 @@
 #define Copy   LC(C)
 #define Paste  LC(V)
 #define BRK PAUSE_BREAK
-
+#define CMA COMMA
 
 &mt {
     flavor = "tap-preferred";
@@ -63,17 +63,17 @@
 
                 default_layer {
 /* QWERTY
- * ------------------------------------------------------------------------------------------------------------------------------------------
- * | `     |       |   W    |   E     |   R   |   T   |-----------------------------------|   Y   |   U   |   I     |   O   | ESC   | ESC   |
- * | TAB   |   A   |   S    |   D     | SYM F | ESC G |-----------------------------------|   H   | SYM J |   K     |   L   |   ;   | ENTER |
- * | Q     | SHIFT  Z   | LALT X | LCTRL C | GUI V |   B   | Num   |---------------  Sym  |   N   | GUI M | LCTRL , | LALT .|   /   | P     |
- * ----------------| CTRL  |----------|  SYM  |  NUM  | ESC ENTER | SYM SPACE  |---| SHIFT| BSPC |  ALT  |  NUM  |---|   '   |---------------
+ * ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * | `     | NONE  |     W      |   E      |    R     |    T    |---------------------------------------|   Y   |    U     |    I          |    O       | ESC   | NONE  |
+ * | Q     |   A   |     S      |   D      |  SYM F   |  ESC G  |---------------------------------------|   H   |    SYM J |    K          |    L       |   ;   | P     |
+ * | TAB   | SHF Z |   LALT X   | LCTRL C  |  GUI V   |    B    | NUM |--------------------------| SYM  |   N   |    GUI M |    RCTRL ,    |  RALT .    |   /   | ENTER |
+ * ----------------|   LCTRL    |----------|   SYM   |   NUM   | ENTER | SPACE |-----------| RSHFT |  BSPC |  NUM  |  SYM  |---------------| SD QUOTE   |----------------
  */
                         bindings = <
-&kp  GRAVE    &none         &kp  W        &kp  E        &kp  R        &kp  T                                                                         &kp  Y        &kp U        &kp  I            &kp  O         &kp  ESC      &kp  ESC
-&kp  TAB      &kp  A        &kp  S        &kp  D        &lt SYM_L F   &lt ESC  G                                                                     &kp  H        &lt SYM_L J  &kp  K            &kp  L         &kp  SEMI     &kp  ENTER  
-&kp  Q        &lt LSHIFT  Z        &mt LALT  X   &mt  LCTRL C  &mt LGUI  V   &kp  B        &mo  NUM_L                                         &mo  SYM_L    &kp  N        &mt RGUI M   &mt LCTRL  COMMA  &mt  RALT DOT  &kp  SLASH    &kp  P
-                            &kp  LCTRL                  &mo SYM_L     &mo  NUM_L   &mt  ESC ENTER    &lt SYM_L  SPACE   &kp  RSHFT    &kp  BSPC     &kp  LALT     &mo NUM_L                      &kp  SQT   
+&kp GRAVE &none        &kp W       &kp E       &kp R        &kp T                                        &kp Y   &kp U       &kp I          &kp O         &kp ESC    &none
+&kp Q     &kp A        &kp S       &kp D       &lt SYM_L F  &lt ESC G                                    &kp H   &lt SYM_L J &kp K          &kp L         &kp SEMI   &kp P
+&kp TAB   &lt LSHFT Z  &mt LALT X  &mt LCTRL C &mt LGUI  V  &kp B     &mo NUM_L               &mo SYM_L  &kp N   &mt RGUI M  &mt LCTRL CMA  &mt RALT DOT  &kp SLASH  &kp ENTER
+                       &kp LCTRL             &mo SYM_L  &mo NUM_L  &kp RET &kp SPACE      &kp RSHFT  &kp BSPC  &mo NUM_L  &mo SYM_L         &kp SQT   
                         >;
 			
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -138,7 +138,7 @@
                 sym_layer {
 /* SYM
  * -------------------------------------------------------------------------------------------------------------------------------------------------
- * | HOME  |    `    |   7   |   8   |   9  |   *   |---------------------------------------|   $    |    {    |    }    |    #    |   LT  |  GT   |
+ * | HOME  |    `    |   7   |   8   |   9  |   *   |---------------------------------------|   $    |    {    |    }    |    #    | TRANS | TRANS |
  * |   &   |    !    |   1   |   2   |   3  |   +   |---------------------------------------|   -    |    [    |    ]    |    '    |   |   | ALTAB |
  * | INS   |    ~    |   4   |   5   |   6  |   =   | TRANS |---------------------| ADJ_L   |   _    |    (    |    )    |    @    |   %   | TRANS |
  * ------------------|     |-------|        |   .   |   0    |  TRANS   |---| MENU | TRANS  |  TRANS | TRANS |--------| CTRL  |---------------------
@@ -156,16 +156,16 @@
                 num_layer {
 /* NUM   
  * ----------------------------------------------------------------------------------------------------------------------------------------------------------
- * |  TRNS  |  TRNS |  F7   |  F8   |  F9   |  BRK |-------------------------------------| C_MUTE |  C_VOL_UP  |   C_VOL_DN   |   TRNS   | TRNS  |  RGB_TOG |
+ * |  TRNS  |  TRNS |  F7   |  F8   |  F9   |  BRK |--------------------------------------| C_MUTE |  C_VOL_UP  |   C_VOL_DN   |   BRK    | TRNS  |  TRNS    |
  * |  TRNS  |  INS  |  F1   |  F2   |  F3   |  F10  |-------------------------------------| Left   |  Down      |   Up         |   Right  | ENTER |  TRNS    |
- * |  TRNS  |  INS  |  F4   |  F5   |  F6   |  F11  | ADJ_L |---------------------| TRNS  | TRNS   |  PG_DN     |   PG_UP      |   ALT    | DEL   |  TRNS    |
+ * |  TRNS  |  INS  |  F4   |  F5   |  F6   |  F11  | ADJ_L |---------------------| TRNS  | PSCRN  |  PG_DN     |   PG_UP      |   ALT    | DEL   |  TRNS    |
  * -----------------| CTRL  |---| TRNS | TRNS | TRNS |     INS    |-----|  PSCRN  |----TRNS-----|----TRNS----|------TRNS----|----| CTRL  |--------------------
  */
                         bindings = <
-&trans  &trans    &kp F7  &kp F8    &kp F9   &kp BRK                                       &kp C_MUTE &kp C_VOL_UP  &kp C_VOL_DN  &trans     &trans     &rgb_ug RGB_TOG
-&trans  &kp  INS  &kp F1  &kp F2    &kp F3   &kp F10                                       &kp LEFT   &kp DOWN      &kp UP        &kp RIGHT  &kp ENTER  &trans
-&trans  &kp  INS  &kp F4  &kp F6    &kp F6   &kp F11 &mo ADJ_L                    &trans   &trans     &kp PG_DN     &kp PG_UP     &kp RCTRL  &kp LALT   &trans
-                    &kp LCTRL   &trans  &trans   &trans  &kp INS   &kp PSCRN  &trans &trans  &trans      &kp RCTRL   
+&trans  &trans    &kp F7  &kp F8    &kp F9   &kp BRK                                       &kp C_MUTE  &kp C_VOL_UP  &kp C_VOL_DN  &kp BRK    &trans     &trans
+&trans  &kp  INS  &kp F1  &kp F2    &kp F3   &kp F10                                       &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT  &kp ENTER  &trans
+&trans  &kp  INS  &kp F4  &kp F6    &kp F6   &kp F11   &mo ADJ_L                  &trans   &kp PSCRN   &kp PG_DN     &kp PG_UP     &kp RCTRL  &kp DEL    &trans
+                  &kp LCTRL   &trans  &trans   &trans  &kp INS           &kp PSCRN  &trans   &trans        &trans                  &kp RCTRL    
                         >;
 			
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
