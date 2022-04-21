@@ -140,13 +140,13 @@
  * -------------------------------------------------------------------------------------------------------------------------------------------------
  * | HOME  |    `    |   7   |   8   |   9  |   *   |---------------------------------------|   $    |    {    |    }    |    #    | TRANS | TRANS |
  * |   &   |    !    |   1   |   2   |   3  |   +   |---------------------------------------|   -    |    [    |    ]    |    '    |   |   | ALTAB |
- * | INS   |    ~    |   4   |   5   |   6  |   =   | TRANS |---------------------| ADJ_L   |   _    |    (    |    )    |    @    |   %   | TRANS |
+ * | INS   |    ~    |   4   |   5   |   6  |   =   | ADJ_L |---------------------| ADJ_L   |   _    |    (    |    )    |    @    |   %   | TRANS |
  * ------------------|     |-------|        |   .   |   0    |  TRANS   |---| MENU | TRANS  |  TRANS | TRANS |--------| CTRL  |---------------------
  */
                         bindings = <
 &kp HOME  &kp GRAVE &kp N7  &kp N8   &kp N9  &kp ASTRK                                      &kp DLLR   &kp LBRC  &kp RBRC  &kp HASH  &kp LT     &kp GT
 &kp AMPS  &kp EXCL  &kp N1  &kp N2   &kp N3  &kp PLUS                                       &kp MINUS  &kp LPAR  &kp RPAR  &kp SQT   &kp PIPE   &kp LA(TAB)
-&kp INS   &kp CARET &kp N4  &kp N5   &kp N6  &kp EQUAL  &trans                   &mo ADJ_L  &kp UNDER  &kp LBKT  &kp RBKT  &kp AT    &kp PRCNT  &trans
+&kp INS   &kp CARET &kp N4  &kp N5   &kp N6  &kp EQUAL  &mo ADJ_L                &mo ADJ_L  &kp UNDER  &kp LBKT  &kp RBKT  &kp AT    &kp PRCNT  &trans
                     &trans       &trans          &kp DOT  &kp N0  &trans       &kp K_APP  &trans   &trans        &trans                  &kp  RCTRL    
                         >;
 			
@@ -158,13 +158,13 @@
  * ----------------------------------------------------------------------------------------------------------------------------------------------------------
  * |  TRNS  |  TRNS |  F7   |  F8   |  F9   |  BRK |--------------------------------------| C_MUTE |  C_VOL_UP  |   C_VOL_DN   |   BRK    | TRNS  |  TRNS    |
  * |  TRNS  |  INS  |  F1   |  F2   |  F3   |  F10  |-------------------------------------| Left   |  Down      |   Up         |   Right  | ENTER |  TRNS    |
- * |  TRNS  |  INS  |  F4   |  F5   |  F6   |  F11  | ADJ_L |---------------------| TRNS  | PSCRN  |  PG_DN     |   PG_UP      |   ALT    | DEL   |  TRNS    |
+ * |  TRNS  |  INS  |  F4   |  F5   |  F6   |  F11  | TRNS  |---------------------| ADJ_L | PSCRN  |  PG_DN     |   PG_UP      |   ALT    | DEL   |  TRNS    |
  * -----------------| CTRL  |---| TRNS | TRNS | TRNS |     INS    |-----|  PSCRN  |----TRNS-----|----TRNS----|------TRNS----|----| CTRL  |--------------------
  */
                         bindings = <
 &trans  &trans    &kp F7  &kp F8    &kp F9   &kp BRK                                       &kp C_MUTE  &kp C_VOL_UP  &kp C_VOL_DN  &kp BRK    &trans     &trans
 &trans  &kp  INS  &kp F1  &kp F2    &kp F3   &kp F10                                       &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT  &kp ENTER  &trans
-&trans  &kp  INS  &kp F4  &kp F6    &kp F6   &kp F11   &mo ADJ_L                  &trans   &kp PSCRN   &kp PG_DN     &kp PG_UP     &kp RCTRL  &kp DEL    &trans
+&trans  &kp  INS  &kp F4  &kp F6    &kp F6   &kp F11   &trans                  &mo ADJ_L   &kp PSCRN   &kp PG_DN     &kp PG_UP     &kp RCTRL  &kp DEL    &trans
                   &kp LCTRL   &trans  &trans   &trans  &kp INS           &kp PSCRN  &trans   &trans        &trans                  &kp RCTRL    
                         >;
 			
