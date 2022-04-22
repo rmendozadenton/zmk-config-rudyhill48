@@ -230,13 +230,13 @@
                 adj_layer {
 /* ADJUST
  * -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- * | RGB_TOG |    QWERTY     | NONEDVORAK | NONECOLEMK  |  NONE    |   NONE   |----------------------------|   NONE  | PSCRN   | NONE   |   EP_OFF       |   EP_ON   |   NONE    |
- * | NONE    |    BT 0       |    BT 1    | BT 2        |  BT 3    |   BT 4   |----------------------------|   NONE  | NONE    | NONE   |   NONE         |   NONE    |   NONE    |
- * | BOOTL   |    RESET      |    NONE    |  OUT_USB    |  OUT_BLE |   A      |  BT CLR |------------| NONE|   NONE  | NONE    | NONE   |   NONE         |   NONE    |   NONE    |
+ * | RGB_TOG |    QWERTY     | NONEDVORAK | NONECOLEMK  |  NONE    |  BT_CLR  |----------------------------|   NONE  | PSCRN   | NONE   |   EP_OFF       |   EP_ON   |   NONE    |
+ * | NONE    |    BT 0       |    BT 1    | BT 2        |  BT 3    |  BT 4    |----------------------------|   NONE  | NONE    | NONE   |   NONE         |   NONE    |   NONE    |
+ * | BOOTL   |    RESET      |    NONE    |  OUT_USB    |  OUT_BLE |  A       |  BT CLR |------------| NONE|   NONE  | NONE    | NONE   |   NONE         |   NONE    |   NONE    |
  * --------------------------| NONE  |-------| NONE | NONE  |    NONE  |  NONE  |  NONE   |--|  NONE    |  NONE   | NONE | NONE  |------|   CTRL  |-------------------------------
  */
                 bindings = <
-&rgb_ug RGB_TOG &to QWERTY_L &none         &none           &none   &none                                       &none  &kp PSCRN  &none  &ext_power EP_OFF  &ext_power EP_ON  &none
+&rgb_ug RGB_TOG &to QWERTY_L &none         &none           &none        &bt BT_CLR                             &none  &kp PSCRN  &none  &ext_power EP_OFF  &ext_power EP_ON  &none
 &none           &bt BT_SEL 0 &bt BT_SEL 1  &bt  BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                           &none  &none      &none  &none              &none             &none
 &bootloader     &reset       &none         &out OUT_USB   &out OUT_BLE  &kp A   &bt BT_CLR              &none  &none  &none      &none  &none              &none             &none
                         &none                &none    &none      &none    &none   &none    &none   &none    &none    &none          &kp RCTRL   
