@@ -159,7 +159,7 @@
  * |  TRNS  |  TRNS |  F7   |  F8   |  F9   |  BRK |--------------------------------------| C_MUTE |  C_VOL_UP  |   C_VOL_DN   |   BRK    | TRNS  |  TRNS    |
  * |  TRNS  |  INS  |  F1   |  F2   |  F3   |  F10  |-------------------------------------| Left   |  Down      |   Up         |   Right  | ENTER |  TRNS    |
  * |  TRNS  |  INS  |  F4   |  F5   |  F6   |  F11  | TRNS  |---------------------| ADJ_L | PSCRN  |  PG_DN     |   PG_UP      |   ALT    | DEL   |  TRNS    |
- * -----------------| CTRL  |---| TRNS | TRNS | TRNS |     INS    |-----|  PSCRN  |----TRNS-----|----TRNS----|------TRNS----|----| CTRL  |--------------------
+ * -----------------| CTRL  |---| TRNS | TRNS | TRNS |     INS    |-----|  PSCRN  |----TRNS-----|----TRNS----|------TRNS----|----| CTRL   |-------------------
  */
                         bindings = <
 &trans  &trans    &kp F7  &kp F8    &kp F9   &kp BRK                                       &kp C_MUTE  &kp C_VOL_UP  &kp C_VOL_DN  &kp BRK    &trans     &trans
@@ -173,17 +173,17 @@
 		
                 adj_layer {
 /* ADJUST
- * -------------------------------------------------------------------------------------------------------------------------------------
- * | RGB_TOG | QWERTY| DVORAK| COLEMK|       |       |-----------------------------------|       |Prt Scr|       | EP_OFF| EP_ON |       |
- * |         | BT 0  | BT 1  | BT 2  | BT 3  | BT 4  |-----------------------------------|       |       |       |       |       |       |
- * | BOOTL   | RESET |       |OUT_USB|OUT_BLE|       |BT CLR |-------------------|       |       |       |       |       |       | SHIFT |
- * ------------------|       |-------|       |       |       |       |---|       |       |       |       |-------| CTRL  |----------------
+ * -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ * | RGB_TOG |    QWERTY     | NONEDVORAK | NONECOLEMK  |  NONE    |   NONE   |----------------------------|   NONE  | PSCRN   | NONE   |   EP_OFF       |   EP_ON   |   NONE    |
+ * | NONE    |    BT 0       |    BT 1    | BT 2        |  BT 3    |   BT 4   |----------------------------|   NONE  | NONE    | NONE   |   NONE         |   NONE    |   NONE    |
+ * | BOOTL   |    RESET      |    NONE    |  OUT_USB    |  OUT_BLE |   A      |  BT CLR |------------| NONE|   NONE  | NONE    | NONE   |   NONE         |   NONE    |   NONE    |
+ * --------------------------| NONE  |-------| NONE | NONE  |    NONE  |  NONE  |  NONE   |--|  NONE    |  NONE   | NONE | NONE  |------|   CTRL  |-------------------------------
  */
                 bindings = <
-&rgb_ug RGB_TOG &to  QWERTY_L &to  DVORAK_L &to  COLEMK_L &none         &none                                                                             &none             &kp PRINTSCREEN    &none         &ext_power EP_OFF  &ext_power EP_ON &none
-&none           &bt  BT_SEL 0 &bt  BT_SEL 1 &bt  BT_SEL 2 &bt  BT_SEL 3 &bt  BT_SEL 4                                                                     &none             &none              &none            &none           &none            &none
-&bootloader     &reset        &none         &out OUT_USB  &out OUT_BLE  &none         &bt BT_CLR                                         &none            &none             &none              &none            &none           &none            &trans
-                            &trans                      &trans        &trans        &trans        &trans                 &trans        &trans           &trans            &trans                              &kp  RCTRL   
+&rgb_ug RGB_TOG &to QWERTY_L &none         &none           &none   &none                                       &none  &kp PSCRN  &none  &ext_power EP_OFF  &ext_power EP_ON  &none
+&none           &bt BT_SEL 0 &bt BT_SEL 1  &bt  BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                           &none  &none      &none  &none              &none             &none
+&bootloader     &reset       &none         &out OUT_USB   &out OUT_BLE  &kp A   &bt BT_CLR              &none  &none  &none      &none  &none              &none             &none
+                        &none                &none    &none      &none    &none   &none    &none   &none    &none    &none          &kp RCTRL   
                         >;
 			
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
