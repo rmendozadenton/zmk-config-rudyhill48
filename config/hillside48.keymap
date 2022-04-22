@@ -17,7 +17,8 @@
 #define NUM_L    4
 #define ADJ_L    5
 
-#define Undo   LC(Z)
+#define UNDO   LC(Z)
+#define REDO   LC(Y)
 #define Cut    LC(X)
 #define Copy   LC(C)
 #define Paste  LC(V)
@@ -33,29 +34,84 @@
     combos {
         compatible = "zmk,combos";
 
+        combo_redo {
+            timeout-ms = <100>;         /* R + E */
+            key-positions = <3 4>;
+            bindings = <&kp REDO>;
+        };
+
+        combo_undo {
+            timeout-ms = <100>;         /* U + I */
+            key-positions = <7 8>;     
+            bindings = <&kp UNDO>;
+        };
+
+        combo_prcnt {
+            timeout-ms = <100>;         /* S + L */
+            key-positions = <14 21>;
+            bindings = <&kp PRCNT>;
+        };
+
+        combo_colon {
+            timeout-ms = <100>;         /* F + J */
+            key-positions = <16 19>;
+            bindings = <&kp COLON>;
+        };
+        
+        combo_tab {
+            timeout-ms = <100>;         /* S + D */
+            key-positions = <14 15>;
+            bindings = <&kp TAB>;
+        };
+
         combo_esc {
-            timeout-ms = <100>;
+            timeout-ms = <100>;         /* D + F */
             key-positions = <15 16>;
             bindings = <&kp ESC>;
         };
 
-        combo_tab {
-            timeout-ms = <100>;
+        combo_fslh {
+            timeout-ms = <100>;         /* F + G */
             key-positions = <16 17>;
-            bindings = <&kp TAB>;
+            bindings = <&kp FSLH>;
+        };
+
+        combo_astrk {
+            timeout-ms = <100>;         /* D + K */
+            key-positions = <15 20>;
+            bindings = <&kp ASTRK>;
+        };
+
+        combo_bslh {
+            timeout-ms = <100>;         /* H + J */
+            key-positions = <18 19>;
+            bindings = <&kp BSLH>;
         };
 
         combo_lt {
-            timeout-ms = <100>;
-            key-positions = <40 41>;
+            timeout-ms = <100>;         /* K + L */
+            key-positions = <20 21>;
             bindings = <&kp LT>;
         };
-
+        
         combo_gt {
-            timeout-ms = <100>;
-            key-positions = <39 40>;
+            timeout-ms = <100>;         /* J + K */
+            key-positions = <19 20>;
             bindings = <&kp GT>;
         };
+
+        combo_grave {
+            timeout-ms = <100>;         /* W + E */
+            key-positions = <2 3>;
+            bindings = <&kp GRAVE>;
+        };
+
+        combo_tilde {
+            timeout-ms = <100>;         /* I + O */
+            key-positions = <8 9>;
+            bindings = <&kp TILDE>;
+        };
+
     };
     
     keymap {
