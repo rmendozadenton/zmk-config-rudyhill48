@@ -47,7 +47,7 @@
         };
 
         combo_prcnt {
-            timeout-ms = <100>;         /* S + L */
+            timeout-ms = <60>;         /* S + L */
             key-positions = <14 21>;
             bindings = <&kp PRCNT>;
         };
@@ -89,25 +89,25 @@
         };
 
         combo_lt {
-            timeout-ms = <100>;         /* K + L */
+            timeout-ms = <60>;         /* K + L */
             key-positions = <20 21>;
             bindings = <&kp LT>;
         };
         
         combo_gt {
-            timeout-ms = <100>;         /* J + K */
+            timeout-ms = <60>;         /* J + K */
             key-positions = <19 20>;
             bindings = <&kp GT>;
         };
 
         combo_grave {
-            timeout-ms = <100>;         /* W + E */
+            timeout-ms = <60>;         /* W + E */
             key-positions = <2 3>;
             bindings = <&kp GRAVE>;
         };
 
         combo_tilde {
-            timeout-ms = <100>;         /* I + O */
+            timeout-ms = <60>;         /* I + O */
             key-positions = <8 9>;
             bindings = <&kp TILDE>;
         };
@@ -203,7 +203,7 @@
 &kp HOME  &kp GRAVE &kp N7  &kp N8   &kp N9  &kp ASTRK                                      &kp DLLR   &kp LBRC  &kp RBRC  &kp HASH  &kp LT     &kp GT
 &kp AMPS  &kp EXCL  &kp N1  &kp N2   &kp N3  &kp PLUS                                       &kp MINUS  &kp LPAR  &kp RPAR  &kp SQT   &kp PIPE   &kp LA(TAB)
 &kp INS   &kp CARET &kp N4  &kp N5   &kp N6  &kp EQUAL  &mo ADJ_L                &mo ADJ_L  &kp UNDER  &kp LBKT  &kp RBKT  &kp AT    &kp PRCNT  &trans
-                    &trans       &trans          &kp DOT  &kp N0  &trans       &kp K_APP  &trans   &trans        &trans                  &kp  RCTRL    
+                    &trans       &trans          &kp DOT  &kp N0  &trans   &kp K_APP  &trans   &trans        &trans                  &kp  RCTRL    
                         >;
 			
                         sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
