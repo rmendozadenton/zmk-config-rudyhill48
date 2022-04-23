@@ -34,6 +34,18 @@
     combos {
         compatible = "zmk,combos";
 
+        combo_c_bri_up {
+            timeout-ms = <100>;         /* B + N */
+            key-positions = <4 5>;
+            bindings = <&kp C_BRI_UP>;
+        };
+        
+        combo_c_bri_dn {
+            timeout-ms = <100>;         /* R + E */
+            key-positions = <29 30>;
+            bindings = <&kp C_BRI_DN>;
+        };
+        
         combo_redo {
             timeout-ms = <100>;         /* R + E */
             key-positions = <3 4>;
