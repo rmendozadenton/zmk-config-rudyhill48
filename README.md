@@ -14,7 +14,7 @@ To build the firmware from this repo:
 - That change will trigger a build action
 - Look in the actions tab for the build triggered by that change
 - Wait for the build to finish
-- Click on the build link
+- Click on the build link.
 - Download the artifact file with the firmware
 - See [Installing The Firmware](https://zmk.dev/docs/user-setup#installing-the-firmware)
   for more details from there.
