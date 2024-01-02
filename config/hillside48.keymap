@@ -138,7 +138,7 @@
 
             bindings = <
 &kp GRAVE  &kp Q        &kp W       &kp E        &kp R        &kp T                                                  &kp Y      &kp U        &kp I          &kp O         &kp ESC    &none
-&kp Q      &kp A        &kp S       &kp D        &lt SYM_L F  &lt ESC G                                              &kp H      &lt SYM_L J  &kp K          &kp L         &kp SEMI   &kp P
+&kp SLASH  &kp A        &kp S       &kp D        &lt SYM_L F  &lt ESC G                                              &kp H      &lt SYM_L J  &kp K          &kp L         &kp SEMI   &kp P
 &kp TAB    &lt LSHFT Z  &mt LALT X  &mt LCTRL C  &mt LGUI V   &kp B      &mo NUM_L                        &mo SYM_L  &kp N      &mt RGUI M   &mt LCTRL CMA  &mt RALT DOT  &kp SLASH  &kp ENTER
                         &kp LCTRL                &mo SYM_L    &mo NUM_L  &kp RET    &kp SPACE  &kp RSHFT  &kp BSPC   &mo NUM_L  &mo SYM_L                   &kp SQT
             >;
