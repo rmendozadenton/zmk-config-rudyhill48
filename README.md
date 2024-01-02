@@ -1,4 +1,4 @@
-# Hillside ZMK firmware Rudy version
+# Hillside ZMK firmware Rudy's version
 
 [![Build](https://github.com/mmccoyd/zmk-config/actions/workflows/build.yml/badge.svg)](https://github.com/mmccoyd/zmk-config/actions/workflows/build.yml)
 
